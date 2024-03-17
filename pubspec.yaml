@@ -1,0 +1,36 @@
+name: photo_editor
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  image_picker: ^1.0.5 
+  provider: ^6.1.1
+  crop_image: ^1.0.11
+  screenshot: ^2.1.0
+  colorfilter_generator: ^0.0.8
+  blur: ^3.1.0
+  pixel_color_picker: ^1.0.0
+  flutter_colorpicker: ^1.0.3
+  lindi_sticker_widget: ^0.1.1
+  text_editor: ^0.7.0
+  painter: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/textures/
+    - assets/stickers/
