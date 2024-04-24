@@ -1,4 +1,4 @@
-class Filter{
+class Filter {
 
   String filterName;
   List<double> matrix;

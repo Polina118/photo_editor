@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:photo_editor/providers/app_image_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -10,6 +11,15 @@ class HomeScreen extends StatefulWidget{
 }
 
 class _HomeScreenState extends State<HomeScreen>{
+
+  late AppImageProvider imageProvider;
+
+  @override
+  void initState() {
+    imageProvider = Provider.of<AppImageProvider>(context, listen: false);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -21,7 +31,9 @@ class _HomeScreenState extends State<HomeScreen>{
           },
         ),
         actions: [
-          TextButton(onPressed: (){}, child: const Text("Save", style: TextStyle(color: Colors.white),))
+          TextButton(onPressed: (){
+            ImageGallerySaver.saveImage(imageProvider.currentImage!);
+          }, child: const Text("Save", style: TextStyle(color: Colors.white),))
         ],
       ),
       body: Center(
@@ -81,34 +93,41 @@ class _HomeScreenState extends State<HomeScreen>{
                       Navigator.of(context).pushNamed('/tint');
                     }
                   ),
-
+                  
                   _bottomBatItem(
                     Icons.blur_circular, "Blur",
                     onPress: (){
                       Navigator.of(context).pushNamed('/blur');
                     }
                   ),
-
-                  _bottomBatItem(
-                    Icons.emoji_emotions_outlined, "Sticker",
-                    onPress: (){
-                      Navigator.of(context).pushNamed('/sticker');
-                    }
-                  ),
-
-                  _bottomBatItem(
-                    Icons.text_fields, "Text",
-                    onPress: (){
-                      Navigator.of(context).pushNamed('/text');
-                    }
-                  ),
-
+                  //
+                  // _bottomBatItem(
+                  //   Icons.emoji_emotions_outlined, "Sticker",
+                  //   onPress: (){
+                  //     Navigator.of(context).pushNamed('/sticker');
+                  //   }
+                  // ),
+                  //
+                  // _bottomBatItem(
+                  //   Icons.text_fields, "Text",
+                  //   onPress: (){
+                  //     Navigator.of(context).pushNamed('/text');
+                  //   }
+                  // ),
+                  
                   _bottomBatItem(
                     Icons.draw_outlined, "Draw",
                     onPress: (){
                       Navigator.of(context).pushNamed('/draw');
                     }
                   ),
+
+                  _bottomBatItem(
+                    Icons.text_fields, "Label",
+                    onPress: (){
+                      Navigator.of(context).pushNamed('/label');
+                    }
+                  )
                 ]
               ),
             ),

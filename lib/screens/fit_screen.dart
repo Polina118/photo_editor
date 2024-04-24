@@ -390,7 +390,7 @@ class _FitScreenState extends State<FitScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 40,
+                  height: 30,
                   width: 40,
                   child: FittedBox(
                     fit: BoxFit.fill,

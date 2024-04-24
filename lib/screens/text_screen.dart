@@ -99,20 +99,19 @@ class _TextScreenState extends State<TextScreen> {
             child: Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: TextEditor(
-                fonts: [], 
+                fonts: const [],
                 textStyle: const TextStyle(color: Colors.white),
                 minFontSize: 10,
-                maxFontSize: 70, 
+                maxFontSize: 70,
                 onEditCompleted: (style, align, text){
                   setState(() {
                     showEditor = false;
                     if (text.isNotEmpty) {
                       controller.addWidget(
-                      Text(text, style: style, textAlign: align)
-                        );
-                      }
+                        Text(text, style: style, textAlign: align)
+                      );
                     }
-                  );
+                  });
                 }
               ),
             ),

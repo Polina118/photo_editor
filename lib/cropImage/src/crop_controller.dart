@@ -1,3 +1,5 @@
+// ignore_for_file: non_nullable_equals_parameter
+
 import 'dart:ui' as ui;
 
 import 'crop_rect.dart';

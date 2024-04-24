@@ -29,11 +29,13 @@ class _StartScreenState extends State<StartScreen> {
     return Scaffold(
       body: Stack (
         children: [
-          SizedBox(
-            width: double.infinity,
-            child: Image.asset('assets/images/wallpaper.png',
-             fit: BoxFit.cover,
-           )
+          Center(
+              child: SizedBox(
+                width: double.infinity,
+                child: Image.asset('assets/images/wallpaper.png',
+                  fit: BoxFit.cover,
+                )
+              )
           ),
 
           Column(
@@ -43,7 +45,7 @@ class _StartScreenState extends State<StartScreen> {
                   'Photo Editor',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 30,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold
                   )),
               )

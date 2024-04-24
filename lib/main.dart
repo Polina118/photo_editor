@@ -8,8 +8,9 @@ import 'package:photo_editor/screens/filter_screen.dart';
 import 'package:photo_editor/screens/fit_screen.dart';
 import 'package:photo_editor/screens/home_screen.dart';
 import 'package:photo_editor/screens/start_screen.dart';
-import 'package:photo_editor/screens/sticker_screen.dart';
-import 'package:photo_editor/screens/text_screen.dart';
+import 'package:photo_editor/screens/label_screen.dart';
+// import 'package:photo_editor/screens/sticker_screen.dart';
+// import 'package:photo_editor/screens/text_screen.dart';
 import 'package:photo_editor/screens/tint_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -49,9 +50,10 @@ class MainApp extends StatelessWidget {
         '/fit': (_) => const FitScreen(),
         '/tint': (_) => const TintScreen(),
         '/blur': (_) => const BlurScreen(),
-        '/sticker': (_) => const StickerScreen(),
-        '/text': (_) => const TextScreen(),
+        // '/sticker': (_) => const StickerScreen(),
+        // '/text': (_) => const TextScreen(),
         '/draw': (_) => const DrawScreen(),
+        '/label': (_) => const LabelScreen(),
       },
       initialRoute: '/',
         );

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "917809050865",
+    "project_id": "imagelabelproject-f5bf0",
+    "storage_bucket": "imagelabelproject-f5bf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917809050865:android:57710468551ecb3135a550",
+        "android_client_info": {
+          "package_name": "com.example.image_labelling"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo1GG2V6j9YbBjcbNwmqHLdwpSizDThvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -21,6 +21,9 @@ dependencies:
   lindi_sticker_widget: ^0.1.1
   text_editor: ^0.7.0
   painter: ^2.0.0
+  image_gallery_saver: ^2.0.3
+  google_mlkit_image_labeling: ^0.10.0
+  # firebase_ml_vision: ^0.12.0+3
 
 dev_dependencies:
   flutter_test:
@@ -33,4 +36,4 @@ flutter:
   assets:
     - assets/images/
     - assets/textures/
-    - assets/stickers/
+    # - assets/stickers/

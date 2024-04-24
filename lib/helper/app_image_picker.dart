@@ -15,7 +15,7 @@ class AppImagePicker{
     if(image != null){
       onPick(File(image.path));
     } else{
-      onPick(File('/assets/images/wallpaper.png'));
+      onPick(File('assets/images/wallpaper.png'));
     }
 
   }
