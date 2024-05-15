@@ -68,7 +68,7 @@ class _AdjustScreenState extends State<AdjustScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: const CloseButton(color: Colors.white,),
-        title: const Text('Adjust'),
+        title: const Text('Регулирование'),
         actions: [
           IconButton(color: Colors.white,
             onPressed: () async {
@@ -179,7 +179,7 @@ class _AdjustScreenState extends State<AdjustScreen> {
                 ),
                 TextButton
                 (
-                  child: const Text("RESET", style: TextStyle(color: Colors.white),),
+                  child: const Text("Сброс", style: TextStyle(color: Colors.white),),
                   onPressed: (){
                     setState(() {
                       brightness = 0;
@@ -206,35 +206,35 @@ class _AdjustScreenState extends State<AdjustScreen> {
               child: Row(
                 children: [
                   _bottomBatItem(
-                    Icons.brightness_1, "Brightness", color: showbrightness ? Colors.blue : null,
+                    Icons.brightness_1, "Яркость", color: showbrightness ? Colors.blue : null,
                     onPress: (){
                       showSlider(b : true);
                     }
                   ),
 
                   _bottomBatItem(
-                    Icons.contrast, "Contrast", color: showcontrast ? Colors.blue : null,
+                    Icons.contrast, "Контраст", color: showcontrast ? Colors.blue : null,
                     onPress: (){
                       showSlider(c : true);
                     }
                   ),
 
                   _bottomBatItem(
-                    Icons.water_drop, "Saturation", color: showsaturation ? Colors.blue : null,
+                    Icons.water_drop, "Насыщенность", color: showsaturation ? Colors.blue : null,
                     onPress: (){
                       showSlider(s : true);
                     }
                   ),
 
                   _bottomBatItem(
-                    Icons.filter_tilt_shift, "Hue", color: showhue ? Colors.blue : null, 
+                    Icons.filter_tilt_shift, "Оттенок", color: showhue ? Colors.blue : null, 
                     onPress: (){
                       showSlider(h : true);
                     }
                   ),
 
                   _bottomBatItem(
-                    Icons.motion_photos_on, "Sepia", color: showsepia ? Colors.blue : null,
+                    Icons.motion_photos_on, "Сепия", color: showsepia ? Colors.blue : null,
                     onPress: (){
                       showSlider(se : true);
                     }

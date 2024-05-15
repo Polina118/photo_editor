@@ -84,7 +84,7 @@ class _DrawScreenState extends State<DrawScreen> {
                   children: [
                     Row(
                       children: [
-                        Container(
+                        SizedBox(
                           width: 20,
                           child: Icon(Icons.circle, color: Colors.white, size: painterController.thickness + 3)
                         ),

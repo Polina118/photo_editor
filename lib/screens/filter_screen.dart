@@ -1,6 +1,4 @@
-
 import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:photo_editor/helper/filters.dart';
 import 'package:photo_editor/model/filter.dart';
@@ -36,7 +34,7 @@ class _FilterScreenState extends State<FilterScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: const CloseButton(color: Colors.white,),
-        title: const Text('Filters'),
+        title: const Text('Фильтры'),
         actions: [
           IconButton(color: Colors.white,
             onPressed: () async {
@@ -44,7 +42,7 @@ class _FilterScreenState extends State<FilterScreen> {
               imageProvider.changeImage(bytes!);
               if(!mounted) return;
               Navigator.of(context).pop();
-          }, 
+          },  
           icon: const Icon(Icons.done)
           )
         ],
@@ -70,7 +68,7 @@ class _FilterScreenState extends State<FilterScreen> {
         ),
         bottomNavigationBar: Container(
           width: double.infinity,
-          height: 60,
+          height: 85,
           color: Colors.black,
           child: SafeArea(
             child: Consumer<AppImageProvider>(
@@ -86,7 +84,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(
-                              width: 80,
+                              width: 60,
                               child: FittedBox(
                                 fit: BoxFit.fill,
                                 child: InkWell(

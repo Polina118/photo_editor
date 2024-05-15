@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class AppImageProvider extends ChangeNotifier{
 
   Uint8List? currentImage;
+  String? path;
 
   changeImageFile(File image){
     currentImage = image.readAsBytesSync();

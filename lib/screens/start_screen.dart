@@ -17,23 +17,30 @@ class _StartScreenState extends State<StartScreen> {
 
   late AppImageProvider imageProvider;
 
+  void callImageProvider(File? image) {
+    imageProvider.changeImageFile(image!);
+    imageProvider.path = image.path;
+    Navigator.of(context).pushReplacementNamed('/home');
+  }
+
   @override
   void initState(){
     imageProvider = Provider.of<AppImageProvider>(context, listen: false);
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
       body: Stack (
         children: [
-          SizedBox(
-            width: double.infinity,
-            child: Image.asset('assets/images/wallpaper.png',
-             fit: BoxFit.cover,
-           )
+          Center(
+              child: SizedBox(
+                width: double.infinity,
+                child: Image.asset('assets/images/wallpaper.png',
+                  fit: BoxFit.cover,
+                )
+              )
           ),
 
           Column(
@@ -43,7 +50,7 @@ class _StartScreenState extends State<StartScreen> {
                   'Photo Editor',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 30,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold
                   )),
               )
@@ -52,30 +59,30 @@ class _StartScreenState extends State<StartScreen> {
                 child: Container(),
                 ),
               Expanded(
-                child: Center( 
+                child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
                         onPressed: () {
                           AppImagePicker(source: ImageSource.gallery)
-                          .pick(onPick: (File? image){
-                            imageProvider.changeImageFile(image!);
-                            Navigator.of(context).pushReplacementNamed('/home');
-                          });
-                        }, 
-                        child: const Text("Gallery")
-                        ),
-                        ElevatedButton(
+                          .pick(onPick: callImageProvider);
+                        },
+                        child: const Text("Гелерея")
+                      ),
+                      ElevatedButton(
                         onPressed: () {
                           AppImagePicker(source: ImageSource.camera)
-                          .pick(onPick: (File? image){
-                            imageProvider.changeImageFile(image!);
-                            Navigator.of(context).pushReplacementNamed('/home');
-                          });
-                        }, 
-                        child: const Text("Camera")
-                        )
+                          .pick(onPick: callImageProvider);
+                        },
+                        child: const Text("Камера")
+                      ),
+                       ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/generate');
+                        },
+                        child: const Text("Сгенерировать")
+                      )
                     ],
                   ))
                 )

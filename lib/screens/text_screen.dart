@@ -99,7 +99,7 @@ class _TextScreenState extends State<TextScreen> {
             child: Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: TextEditor(
-                fonts: [], 
+                fonts: const [], 
                 textStyle: const TextStyle(color: Colors.white),
                 minFontSize: 10,
                 maxFontSize: 70, 

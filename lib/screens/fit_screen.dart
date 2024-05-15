@@ -74,7 +74,7 @@ class _FitScreenState extends State<FitScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: const CloseButton(color: Colors.white,),
-        title: const Text('Fit'),
+        title: const Text('Соотношение'),
         actions: [
           IconButton(color: Colors.white,
             onPressed: () async {
@@ -160,7 +160,7 @@ class _FitScreenState extends State<FitScreen> {
                     children: [
                       Expanded(
                         child: _bottomBatItem(
-                          Icons.aspect_ratio, "Ratio",
+                          Icons.aspect_ratio, "Размер",
                           onPress: (){
                             showActiveWidget(r : true);
                           }
@@ -169,7 +169,7 @@ class _FitScreenState extends State<FitScreen> {
                   
                        Expanded(
                          child: _bottomBatItem(
-                          Icons.blur_linear, "Blur",
+                          Icons.blur_linear, "Размыть",
                           onPress: (){
                             showBackgroundWidget(i : true);
                             showActiveWidget(b : true);
@@ -179,7 +179,7 @@ class _FitScreenState extends State<FitScreen> {
                   
                        Expanded(
                          child: _bottomBatItem(
-                          Icons.color_lens_outlined, "Color",
+                          Icons.color_lens_outlined, "Цвет",
                           onPress: (){
                             showBackgroundWidget(c : true);
                             showActiveWidget(c : true);
@@ -189,7 +189,7 @@ class _FitScreenState extends State<FitScreen> {
                   
                        Expanded(
                          child: _bottomBatItem(
-                          Icons.texture, "Texture",
+                          Icons.texture, "Текстура",
                           onPress: (){
                             showBackgroundWidget(t : true);
                             showActiveWidget(t : true);
@@ -390,7 +390,7 @@ class _FitScreenState extends State<FitScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 40,
+                  height: 30,
                   width: 40,
                   child: FittedBox(
                     fit: BoxFit.fill,
